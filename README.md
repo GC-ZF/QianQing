@@ -33,3 +33,5 @@
 				<img  src="https://visitor-badge.glitch.me/badge?page_id=QianQIng" title="访客"/>
 			</a>
 </p>
+# Introduced
+写给网友的微信推送
