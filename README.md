@@ -2,7 +2,7 @@
 
 <h1 align="center">
 	<a href="https://zhangshier.vip/">
-		<img src="https://readme-typing-svg.herokuapp.com/?lines=钱晴;早安好!&center=true&size=27">
+		<img src="https://readme-typing-svg.herokuapp.com/?lines=钱晴;早上好!&center=true&size=27">
 	</a>
 </h1>
 
