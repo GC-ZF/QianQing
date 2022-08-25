@@ -1,7 +1,7 @@
 name: morning
 on:
   schedule:
-  - cron:  '30 0 * * *'
+  - cron:  '0 23 * * *'
   workflow_dispatch:
 
 jobs:
@@ -15,8 +15,8 @@ jobs:
       with:
         ref: main
         
-#     - name: 设置时区
-#       run: sudo timedatectl set-timezone 'Asia/Shanghai'
+    - name: 设置时区
+      run: sudo timedatectl set-timezone 'Asia/Shanghai'
 
     - name: sender
       uses: actions/setup-python@v2
