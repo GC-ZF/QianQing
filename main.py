@@ -8,8 +8,7 @@ import requests
 import os
 import random
 
-#today = datetime.now ()
-today = datetime.now ().strftime ( '%Y-%m-%d-%H:%M' )
+today = datetime.now ()
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
 birthday_gril = os.environ['BIRTHDAY_GRIL']
@@ -58,7 +57,7 @@ client = WeChatClient ( app_id, app_secret )
 
 wm = WeChatMessage ( client )
 city, wea, low, high, airQuality, temperature = get_weather ()
-data = {"data": {"value": today.strftime ( '%Y-%m-%d' ), "color": get_random_color ()},
+data = {"data": {"value": today.strftime ( '%Y-%m-%d-%H:%M' ), "color": get_random_color ()},
         "city": {"value": city, "color": get_random_color ()},
         "weather": {"value": wea, "color": get_random_color ()},
         "low": {"value": low, "color": get_random_color ()},
