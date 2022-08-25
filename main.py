@@ -9,7 +9,7 @@ import os
 import random
 
 #today = datetime.now ()
-today=today.strftime ( '%Y-%m-%d-%H:%M' )
+today = datetime.now ().strftime ( '%Y-%m-%d-%H:%M' )
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
 birthday_gril = os.environ['BIRTHDAY_GRIL']
