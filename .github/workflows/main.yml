@@ -27,7 +27,7 @@ jobs:
     
     - name: Record time  
       run: |
-        echo $(date +%F%n%T) >> log.log
+        echo $(date +%F%n%T) >> log.txt
         
     - name: Commit & Push
       run: |
