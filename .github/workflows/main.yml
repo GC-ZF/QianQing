@@ -27,7 +27,7 @@ jobs:
     
     - name: Commit & Push
       run: |
-        echo $(date +%F%n%T) >>Actions.log
+        echo $(date +%F%n%T) >>Actions.txt
         cat Actions.log
         S=$(curl 'https://v1.hitokoto.cn/?c=a&encode=text')
         git config user.name "github-actions[bot]"
