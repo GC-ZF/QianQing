@@ -27,7 +27,7 @@ jobs:
     
     - name: Commit and push if changed   # 将文件更新到仓库
       run: |
-        echo $(date +%F%n%T) >> log.log
+        echo $(date +%F%n%T) >> log.txt
         ls -l
         git diff
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
