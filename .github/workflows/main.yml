@@ -27,7 +27,7 @@ jobs:
     
     - name: 提交仓库
       run: |-
-        echo `date` 
+        echo $(date +%F)
 #         git add .
 #         git diff
 #         git config --global user.email "github-actions[bot]@users.noreply.github.com"
