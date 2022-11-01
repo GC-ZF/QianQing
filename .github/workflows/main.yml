@@ -27,7 +27,7 @@ jobs:
     
     - name: Commit & Push
       run: |
-        echo 'date' >>1.txt
+        echo $(date +%F%n%T) >>1.txt
         S=$(curl 'https://v1.hitokoto.cn/?c=a&encode=text')
         git config user.name GC-ZF
         git config user.email zhang15835765326@gmail.com
