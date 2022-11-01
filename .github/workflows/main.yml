@@ -28,11 +28,11 @@ jobs:
     - name: Commit & Push
       run: |
         echo $(date +%F%n%T) >> log.txt
-        git add .
-        git diff
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git config --global user.name "github-actions[bot]"
-        git commit -m "Keep Actions"
+        S=$(curl 'https://v1.hitokoto.cn/?c=a&encode=text')
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add -A .
+        git commit -m ":rocket: ${S}"
         git push
 
 
