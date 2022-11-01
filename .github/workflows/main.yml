@@ -28,12 +28,8 @@ jobs:
     - name: Commit & Push
       run: |
         echo $(date +%F%n%T) >>Actions.log
-        S=$(curl 'https://v1.hitokoto.cn/?c=a&encode=text')
-        git config user.name GC-ZF
-        git config user.email zhang15835765326@gmail.com
-        git add -A .
-        git commit -m ":rocket: ${S}"
-        git push
+        cat Actions.log
+
 
 #     env:
 #       APP_ID: ${{ secrets.APP_ID }}
