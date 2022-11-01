@@ -28,12 +28,12 @@ jobs:
     - name: 提交仓库
       run: |-
         echo $(date +%F%n%T) >> log.log
-#         git add .
-#         git diff
-#         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-#         git config --global user.name "github-actions[bot]"
-#         git commit -m "Keep Actions"
-#         git push
+        git add .
+        git diff
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+        git commit -m "Keep Actions"
+        git push
 
     env:
       APP_ID: ${{ secrets.APP_ID }}
