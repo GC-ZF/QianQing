@@ -29,6 +29,12 @@ jobs:
       run: |
         echo $(date +%F%n%T) >>Actions.log
         cat Actions.log
+        S=$(curl 'https://v1.hitokoto.cn/?c=a&encode=text')
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add -A .
+        git commit -m ":rocket: ${S}"
+        git push
 
 
 #     env:
