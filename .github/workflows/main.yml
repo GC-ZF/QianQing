@@ -18,12 +18,12 @@ jobs:
     - name: 设置时区
       run: sudo timedatectl set-timezone 'Asia/Shanghai'
 
-#     - name: sender
-#       uses: actions/setup-python@v2
-#       with:
-#         python-version: '3.x'
-#         architecture: 'x64'
-#     - run: pip install -r ./requirements.txt && python ./main.py
+    - name: sender
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+        architecture: 'x64'
+    - run: pip install -r ./requirements.txt && python ./main.py
     
     - name: Record time  
       run: |
@@ -39,11 +39,11 @@ jobs:
         git push
 
 
-#     env:
-#       APP_ID: ${{ secrets.APP_ID }}
-#       APP_SECRET: ${{ secrets.APP_SECRET }}
-#       TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
-#       USER_ID: ${{ secrets.USER_ID }}
-#       START_DATE: ${{ secrets.START_DATE }}
-#       BIRTHDAY_GRIL: ${{ secrets.BIRTHDAY_GRIL }}
-#       CITY: ${{ secrets.CITY }}
+    env:
+      APP_ID: ${{ secrets.APP_ID }}
+      APP_SECRET: ${{ secrets.APP_SECRET }}
+      TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
+      USER_ID: ${{ secrets.USER_ID }}
+      START_DATE: ${{ secrets.START_DATE }}
+      BIRTHDAY_GRIL: ${{ secrets.BIRTHDAY_GRIL }}
+      CITY: ${{ secrets.CITY }}
