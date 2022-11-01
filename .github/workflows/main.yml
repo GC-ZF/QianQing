@@ -18,22 +18,21 @@ jobs:
     - name: 设置时区
       run: sudo timedatectl set-timezone 'Asia/Shanghai'
 
-    - name: sender
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
-        architecture: 'x64'
+#     - name: sender
+#       uses: actions/setup-python@v2
+#       with:
+#         python-version: '3.x'
+#         architecture: 'x64'
 #     - run: pip install -r ./requirements.txt && python ./main.py
     
-    - name: Commit and push if changed   # 将文件更新到仓库
+    - name: Commit & Push
       run: |
-        echo $(date +%F%n%T) >> log.log
-        ls -l
-        git diff
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git config --global user.name "github-actions[bot]"
-        git add -A
-        git commit -m "$(date '+%Y-%m-%d %H:%M:%S')"
+        echo 'date' >>1.txt
+        S=$(curl 'https://v1.hitokoto.cn/?c=a&encode=text')
+        git config user.name GC-ZF
+        git config user.email zhang15835765326@gmail.com
+        git add -A .
+        git commit -m ":rocket: ${S}"
         git push
 
 #     env:
