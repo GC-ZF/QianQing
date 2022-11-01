@@ -27,14 +27,7 @@ jobs:
     
     - name: Commit and push if changed   # 将文件更新到仓库
       run: |
-        echo $(date +%F%n%T) >> log.txt
-        ls -l
-        git diff
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git config --global user.name "github-actions[bot]"
-        git add -A
-        git commit -m "$(date '+%Y-%m-%d %H:%M:%S')"
-        git push
+        echo $(date +%F%n%T) >> log.log
 
 #     env:
 #       APP_ID: ${{ secrets.APP_ID }}
